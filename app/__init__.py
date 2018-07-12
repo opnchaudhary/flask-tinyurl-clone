@@ -8,6 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail
 from flask_migrate import Migrate
 from flask_moment import Moment
+from redis import StrictRedis
 from config import Config
 
 bcrypt = Bcrypt()
@@ -18,6 +19,7 @@ login_manager = LoginManager()
 login_manager.login_view = 'auth.login'
 login_manager.login_message='Please login to access this page'
 mail = Mail()
+redis = StrictRedis(host='localhost', port=6379, db=0)
 
 def create_app(config_class=Config):
     app = Flask(__name__)
