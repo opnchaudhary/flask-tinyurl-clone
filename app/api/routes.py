@@ -3,9 +3,9 @@ from flask import jsonify, request, url_for
 
 
 from app import db, redis
-from app.api import bp
-from app.api.models import Url
-from app.api.utils import generate_key, respond201, respond404, respond422
+from . import bp
+from .models import Url
+from .utils import generate_key, respond201, respond404, respond422
 
 
 @bp.route('/create/', methods=['POST'])
