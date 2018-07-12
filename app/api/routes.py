@@ -8,7 +8,7 @@ from .models import Url
 from .utils import generate_key, respond201, respond404, respond422
 
 
-@bp.route('/create/', methods=['POST'])
+@bp.route('/create', methods=['POST'])
 def create_url():
     data = request.get_json()
     if 'url' in data:
