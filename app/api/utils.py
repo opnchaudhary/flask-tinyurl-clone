@@ -11,7 +11,6 @@ def random_string_generator(size=7, chars=string.ascii_letters + string.digits):
 
 
 def generate_key(url):
-    #key = hashlib.md5(url.encode('utf-8')).hexdigest()
     key = random_string_generator()
     return key
 
